@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,36 +26,42 @@
     <title>Agenda Simples JS</title>
 </head>
 <body>
-    <div class="box">
-            <fieldset>
-                <legend><b>Agenda</b></legend>
-                <div class="text">Bem Vindo à Agenda Simples</div>
-                <br>
-                <div class="inputBox">
-                    <input oninput ="validarContato();" type="text" id="fname" name="fname" class="inputUser" required ><br>
-                    <label for="fname" class="labelInput">Nome:</label><br>
-                </div>
-                <br>
-                <div class="inputBox">
-                    <input oninput="validarContato();" type="text" id="telefone" name="lname" class="inputUser" required ><br>
-                    <label for="lname" class="labelInput">Telefone:</label><br>
-                </div>
-                <button onclick="adicionarContato();" id="submit">Adicionar</button>
-                <p id="mensagemAviso"></p>
-                <div class="text"><b>Meus Contatos</b></div>
-                <br>
-                <div class="tabel">
-                    <table id="tabelaContatos">
-                        <tr>
-                            <th>Nome</th>
-                            <th>Telefone</th>
-                            <th>X</th>
-                        </tr>
-                    </table>
-                </div>
-                <div class="text"><h4 id="dataHora"></h4></div>
-            </fieldset>
-    </div>
+    <div class="centralizaFlex">
+        <div class="box">
+                <fieldset>
+                    <legend><b>Agenda</b></legend>
+                    <div class="text">Bem Vindo à Agenda Simples</div>
+                    <br>
+                    <div class="inputBox">
+                        <input oninput ="validarContato();" type="text" id="fname" name="fname" class="inputUser" required ><br>
+                        <label for="fname" class="labelInput">Nome:</label><br>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <input oninput="validarContato();" type="text" id="telefone" name="lname" class="inputUser" required ><br>
+                        <label for="lname" class="labelInput">Telefone:</label><br>
+                    </div>
+                    <button onclick="adicionarContato();" id="submit">Adicionar</button>
+                    <p id="mensagemAviso"></p>
+                    <div class="text"><b>Meus Contatos</b></div>
+                    <br>
+                    <div class="tabel">
+                        <table id="tabelaContatos">
+                            <tr>
+                                <th>Nome</th>
+                                <th>Telefone</th>
+                                <th>X</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="text"><h4 id="dataHora"></h4></div>
+                </fieldset>
+        </div>
+    </div> 
     <script src="assets/js/agenda.js"></script>
 </body>
 </html>
+
+<!--QUANDO O NAVEGADOR ENCONTRA UM ARQUIVO HTML, ELE LÊ TODAS AS LINHAS DO ARQUIVO E RENDERIZA O ARQUIVO RESULTANDO EM UM DOM.
+O QUE É DOM?
+DOM QUER DIZER EM INGLÊS, DOCUMENT OBJECT MODEL, TRADUZINDO, MODELO OU REFERENCIA DE OBJECTO DO DOCUMENTO, DOCUMENTO HTML.-->

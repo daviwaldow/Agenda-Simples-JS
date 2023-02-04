@@ -29,17 +29,22 @@ function exibirLista(parmFonteDados){
     for (let volta = 0; volta < parmFonteDados.length; volta++){
         let linhaTabela = tabelaContatos.insertRow();
         let colunaTabela = linhaTabela.insertCell(0);
+        colunaTabela.classList.add("estiloDaColunaDados");
         let novoNodeTexto = document.createTextNode(parmFonteDados[volta].nome);
         colunaTabela.appendChild(novoNodeTexto);
         colunaTabela = linhaTabela.insertCell(1);
+        colunaTabela.classList.add("estiloDaColunaDados");
         novoNodeTexto = document.createTextNode(parmFonteDados[volta].telefone);
         colunaTabela.appendChild(novoNodeTexto);
         
         let botaoDeletar = document.createElement("button");
         botaoDeletar.addEventListener("click", ()=>{deletarContato(parmFonteDados[volta].telefone);},false);
-        botaoDeletar.appendChild(document.createTextNode("Deletar"));
-        botaoDeletar.classList.add("btnPrimary");
+        let icone = document.createElement("i");
+        icone.classList.add("ri-delete-bin-2-line");
+        botaoDeletar.appendChild(icone);
+        botaoDeletar.classList.add("btnDeletar");
         colunaTabela = linhaTabela.insertCell(2);
+        colunaTabela.classList.add("centerTextCell");
         colunaTabela.appendChild(botaoDeletar);
     }
 }
