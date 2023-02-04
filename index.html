@@ -26,7 +26,6 @@
 </head>
 <body>
     <div class="box">
-        <form action="">
             <fieldset>
                 <legend><b>Agenda</b></legend>
                 <div class="text">Bem Vindo à Agenda Simples</div>
@@ -40,7 +39,7 @@
                     <input oninput="validarContato();" type="text" id="telefone" name="lname" class="inputUser" required ><br>
                     <label for="lname" class="labelInput">Telefone:</label><br>
                 </div>
-                <button onclick="adicionarContato();">Adicionar</button>
+                <button onclick="adicionarContato();" id="submit">Adicionar</button>
                 <p id="mensagemAviso"></p>
                 <div class="text"><b>Meus Contatos</b></div>
                 <br>
@@ -49,12 +48,12 @@
                         <tr>
                             <th>Nome</th>
                             <th>Telefone</th>
+                            <th>X</th>
                         </tr>
                     </table>
                 </div>
                 <div class="text"><h4 id="dataHora"></h4></div>
             </fieldset>
-        </form>
     </div>
     <script src="assets/js/agenda.js"></script>
 </body>

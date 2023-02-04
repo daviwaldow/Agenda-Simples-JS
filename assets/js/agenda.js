@@ -34,7 +34,23 @@ function exibirLista(parmFonteDados){
         colunaTabela = linhaTabela.insertCell(1);
         novoNodeTexto = document.createTextNode(parmFonteDados[volta].telefone);
         colunaTabela.appendChild(novoNodeTexto);
+        
+        let botaoDeletar = document.createElement("button");
+        botaoDeletar.addEventListener("click", ()=>{deletarContato(parmFonteDados[volta].telefone);},false);
+        botaoDeletar.appendChild(document.createTextNode("Deletar"));
+        botaoDeletar.classList.add("btnPrimary");
+        colunaTabela = linhaTabela.insertCell(2);
+        colunaTabela.appendChild(botaoDeletar);
     }
+}
+
+function deletarContato(telefone){
+    let indice = fonteDados.filter(x => x.telefone != telefone);
+    localStorage.removeItem("listaContatos"); 
+    localStorage.setItem("listaContatos", JSON.stringify(indice));
+    exibirLista(indice);
+    fonteDados = indice;
+
 }
 // Esta funcao vai validar o contato que o usuario adicionar
 function validarContato(){

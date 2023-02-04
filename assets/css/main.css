@@ -70,6 +70,24 @@ table, th, td{
 table{
     width: 99%;
 }
+table tr:nth-child(odd){
+    background-image: linear-gradient(to right, rgba(168, 50, 174, 0.348), rgba(101, 9, 122, 0.348));
+
+}
+#submit, .btnPrimary{
+    background-image: linear-gradient(to right, rgb(118, 35, 122),rgb(116, 12, 140));
+    width: 100%;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    position: inherit;
+    border-radius: 10px;
+}
+#submit:hover, .btnPrimary:hover{
+    background-image: linear-gradient(to right, rgb(91, 27, 94), rgb(81, 13, 97))
+}
 
 @media (max-width: 784px) {
     .box{
